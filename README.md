@@ -71,3 +71,14 @@ CGLib动态代理是通过字节码底层继承要代理类来实现（如果被
     </aop:config>
 ```
 [Spring AOP简介](https://www.jianshu.com/p/5b9a0d77f95f)
+
+3. SpringBoot配置文件的导入
+ - 导入.properties配置文件
+  ```
+  @PropertySource("classpath:config.properties")
+  ```
+  不能加载.yml配置文件
+ - 导入 spring的配置文件
+  ```
+  @ImportResource(locations="{classpath:spring.xml}")
+  ```
